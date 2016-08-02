@@ -1,0 +1,66 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400';
+body {
+  font-family: Lato, Helvetica, arial, sans-serif;
+  text-align: center;
+  line-height: 1.333;
+  color: #666262;
+}
+
+h1 {
+  font-size: 1.333em;
+  font-weight: 300
+}
+
+.content {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.777em 1em;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin: 1.777em 0;
+}
+
+.billboard {
+  font-size: 1.777em;
+  font-weight: 300;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0.422em 0;
+}
+
+.nav-container {
+  margin-top: 1.33em;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 0.317em;
+  text-decoration: none;
+  color: #666262;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.nav-item:hover {
+  color: #FF7D00;
+}
+
+.nav-label {
+  font-size: 0.75em;
+  display: block;
+}
+
+.nav-icon {
+  font-size: 1.777em;
+  display: block;
+}
+
+@media screen and (min-width: 500px) {
+  .billboard {
+    font-size: 2.369em;
+  }
+}
