@@ -1,66 +1,173 @@
-@import 'https://fonts.googleapis.com/css?family=Lato:300,400';
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  font-family: Lato, Helvetica, arial, sans-serif;
-  text-align: center;
-  line-height: 1.333;
-  color: #666262;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-h1 {
-  font-size: 1.333em;
-  font-weight: 300
+/**
+ * End Reset
+ */
+
+* {
+    box-sizing: border-box;
 }
 
-.content {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 1.777em 1em;
+html, body {
+    height: 100vh;
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
-.photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  margin: 1.777em 0;
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: #1A1A1A;
+    color: white;
 }
 
-.billboard {
-  font-size: 1.777em;
-  font-weight: 300;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0.422em 0;
+a {
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
 }
 
-.nav-container {
-  margin-top: 1.33em;
+a:hover {
+    color: #4EA8DA;
 }
 
-.nav-item {
-  display: inline-block;
-  margin: 0 0.317em;
-  text-decoration: none;
-  color: #666262;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.nav-item:hover {
-  color: #FF7D00;
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "content" "footer";
+    height: 100vh;
 }
 
-.nav-label {
-  font-size: 0.75em;
-  display: block;
+.layout__content {
+    display: grid;
+    grid-area: content;
+    align-content: center;
+    text-align: center;
 }
 
-.nav-icon {
-  font-size: 1.777em;
-  display: block;
+.layout__footer {
+    grid-area: footer;
+    padding: 1rem;
 }
 
-@media screen and (min-width: 500px) {
-  .billboard {
-    font-size: 2.369em;
-  }
+hr {
+    border: 0;
+    height: 1px;
+    min-width: 300px;
+
+    background-image: linear-gradient(90deg, #1A1A1A 0%, #4EA8DA 51.68%, #1A1A1A 100%);
+}
+
+.heading {
+    font-size: 30px;
+    font-weight: 100;
+}
+.sub-heading {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.footer__nav-list {
+    display: flex;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.footer__nav-list-item {
+    flex: 1;
+    text-align: center;
+}
+
+.footer__nav-list-link {
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a,
+a path {
+    color: white;
+    fill: white;
+    transition: all .3s ease-in-out;
+}
+
+a:hover,
+a:hover path {
+    color: #4EA8DA;
+    fill: #4EA8DA;
+}
+
+.footer__nav-list-link-icon {
+    max-height: 30px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.footer__resume-download {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+.heading {
+    font-size: 53px;
+    font-weight: 100;
+}
+.sub-heading {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+
 }
